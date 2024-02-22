@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.content.Intent
+set
 
 class DisplayActivity : AppCompatActivity() {
 
@@ -21,5 +23,10 @@ class DisplayActivity : AppCompatActivity() {
         lyricsDisplayTextView = findViewById(R.id.lyricsDisplayTextView)
         textSizeSelectorButton = findViewById(R.id.textSizeSelectorButton)
 
+
+        textSizeSelectorButton.setOnClickListener{
+            intent = Intent(this,TextSizeActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
